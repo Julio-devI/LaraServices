@@ -24,7 +24,7 @@
                             <div class="thinborder-ontop">
                                 <h3>User Info</h3>
                                 <x-jet-validation-errors class="mb-4" />
-                                <form id="userregisterationform" method="POST" action="route('register')">
+                                <form id="userregisterationform" method="POST" accept="route('register')">
                                     @csrf                                    
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
@@ -73,8 +73,7 @@
 
                                     <div class="form-group row mb-0">
                                         <div class="col-md-10">
-                                            <span style="font-size: 14px;">If you have already registered <a
-                                                    href="{{route('login')}}" title="Login">click here</a> to login</span>
+                                            <span style="font-size: 14px;">If you have already registered <a href="{{route('login')}}" title="Login">click here</a> to login</span>
                                             <button type="submit" class="btn btn-primary pull-right">Register</button>
                                         </div>
                                     </div>
