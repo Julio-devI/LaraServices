@@ -24,6 +24,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-6 profile1" style="min-height: 300px;">
                                 <div class="thinborder-ontop">
                                     <h3>Login Info</h3>
+                                    <x-jet-validation-errors class="mb-4" />
                                     <form id="userloginform" method="POST" accept="{{route('login')}}">
                                         @csrf                                        
                                         <div class="form-group row">
