@@ -48,7 +48,8 @@
                                                     <th>#</th>
                                                     <th>Image</th>
                                                     <th>Name</th>
-                                                    <th>Slug</th>  
+                                                    <th>Slug</th>
+                                                    <th>Action</th>  
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -58,6 +59,7 @@
                                                         <td><img src="{{asset('images/categories')}}/{{$scategory->image}}" width="60" /></td>
                                                         <td>{{$scategory->name}}</td>
                                                         <td>{{$scategory->slug}}</td>
+                                                        <td><a href="{{route('admin.category.edit',['category_id'=>$scategory->id])}}"><i class="fa fa-edit fa-2x text-info"></i></a></td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
