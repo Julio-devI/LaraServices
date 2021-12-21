@@ -55,6 +55,7 @@
 
                 <ul class="collapse">
                     <li class="title">
+                        <a href="/"><img src="{{asset('images/logo.png')}}"></a>
                     </li>
                     <li> <a href="{{route('home.services_categories')}}">Service Categories</a> </li>
                     {{-- <li> <a href="javascript:void(0);">Air Conditioners</a>
