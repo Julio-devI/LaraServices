@@ -103,6 +103,16 @@
                                             </div>
 
                                             <div class="form-group">
+                                                <label for="slug" class="control-label col-sm-3">Featured: </label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" wire:model="featured">
+                                                        <option value="0">No</option>
+                                                        <option value="1">yes</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
                                                 <label for="slug" class="control-label col-sm-3">Description: </label>
                                                 <div class="col-sm-9">
                                                     <textarea class="form-control" wire:model="description"></textarea>
