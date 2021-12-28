@@ -52,13 +52,13 @@
                                                 <p>{{$service->description}}</p>
                                                 <h4>Inclusion</h4>
                                                 <ul class="list-styles">
-                                                    @foreach (exlode("|", $service->inclusion) as $inclusion)
+                                                    @foreach (explode("|", $service->inclusion) as $inclusion)
                                                     <li><i class="fa fa-plus"></i>{{$inclusion}}</li>
                                                     @endforeach
                                                 </ul>
                                                 <h4>Exclusion</h4>
                                                 <ul class="list-styles">
-                                                    @foreach (exlode("|", $service->exclusion) as $exclusion)
+                                                    @foreach (explode("|", $service->exclusion) as $exclusion)
                                                     <li><i class="fa fa-plus"></i>{{$exclusion}}</li>
                                                     @endforeach
                                                 </ul>
