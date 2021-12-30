@@ -9,6 +9,15 @@ use Livewire\WithPagination;
 class AdminSliderComponent extends Component
 {
     use WithPagination;
+
+    public function deleteSlide($slide_id)
+    {
+        $slide = Slider::find($slide_id);
+        unlink('images/slider/' . $slide->image);
+        $slide->delete();
+        session()->flash('message', 'Slide has been deleted successfully');
+    }
+
     public function render()
     {
         $slides = Slider::paginate(10);
