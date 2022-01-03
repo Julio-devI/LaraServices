@@ -16,7 +16,7 @@ class AdminAddSlideComponent extends Component
 
     public function updated($fields)
     {
-        $this->validateOnly([
+        $this->validateOnly($fields, [
             'title' => 'required',
             'image' => 'required|mimes:jpeg,png',
         ]);

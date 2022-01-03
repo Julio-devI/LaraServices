@@ -36,7 +36,7 @@
                                             All Slides 
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="{{route('admin.add_service')}}" class="btn btn-info pull-right">Add New</a>
+                                            <a href="{{route('admin.add_slide')}}" class="btn btn-info pull-right">Add New</a>
                                         </div>
                                     </div>
                                 </div>
