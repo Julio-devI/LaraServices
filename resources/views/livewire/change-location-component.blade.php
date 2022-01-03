@@ -5,7 +5,7 @@
             <h1>Change Location</h1>
             <div class="crumbs">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li>/</li>
                     <li>Change Location</li>
                 </ul>
@@ -21,7 +21,7 @@
         <div class="paddings-mini">
             <div class="container">
                 <div class="row">
-                    <form action="setlocation" method="post" id="changelocationform">
+                    <form >
                         <input type="hidden" name="_token" value="2NHPrBqKScv73zvhqc7UbyDOvtsWZNm2dbOyAkqx">
                         <div class="col-md-8">
                             <h3>Search Your Location</h3>
