@@ -21,7 +21,12 @@
         <div class="paddings-mini">
             <div class="container">
                 <div class="row">
-                    <form >
+                    @if (Session::has('message'))
+                        <div class="alert alert-success" role="alert">
+                            {{Session::get('message')}}
+                        </div>
+                    @endif
+                    <form wire:submit.prevent="changeLocation">
                         <input type="hidden" name="_token" value="2NHPrBqKScv73zvhqc7UbyDOvtsWZNm2dbOyAkqx">
                         <div class="col-md-8">
                             <h3>Search Your Location</h3>
@@ -39,28 +44,28 @@
                                     <div class="form-group">
                                         <label for="streetnumber" class="col-form-label">Street Number:</label>
                                         <input type="text" class="form-control" id="street_number"
-                                            name="streetnumber">
+                                            name="streetnumber" wire:model="streetnumber">
                                     </div>
                                     <div class="form-group">
                                         <label for="routes" class="col-form-label">Route:</label>
-                                        <input type="text" class="form-control" id="route" name="routes">
+                                        <input type="text" class="form-control" id="route" name="routes" wire:model="routes">
                                     </div>
                                     <div class="form-group">
                                         <label for="city" class="col-form-label">City:</label>
-                                        <input type="text" class="form-control" id="locality" name="city">
+                                        <input type="text" class="form-control" id="locality" name="city" wire:model="city">
                                     </div>
                                     <div class="form-group">
                                         <label for="state" class="col-form-label">State:</label>
                                         <input type="text" class="form-control" id="administrative_area_level_1"
-                                            name="state">
+                                            name="state" wire:model="state">
                                     </div>
                                     <div class="form-group">
                                         <label for="country" class="col-form-label">Country:</label>
-                                        <input type="text" class="form-control" id="country" name="country">
+                                        <input type="text" class="form-control" id="country" name="country" wire:model="country">
                                     </div>
                                     <div class="form-group">
                                         <label for="pincode" class="col-form-label">Pincode:</label>
-                                        <input type="text" class="form-control" id="postal_code" name="pincode">
+                                        <input type="text" class="form-control" id="postal_code" name="pincode" wire:model="zipcode">
                                     </div>
                                 </address>
                             </aside>
