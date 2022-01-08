@@ -20,6 +20,7 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ServiceCategoriesComponent;
 use App\Http\Livewire\ServiceDetailsComponent;
 use App\Http\Livewire\ServicesByCategoryComponent;
+use App\Http\Livewire\Sprovider\EditSproviderProfileComponent;
 use App\Http\Livewire\Sprovider\SproviderDashboardComponent;
 use App\Http\Livewire\Sprovider\SproviderProfileComponent;
 
@@ -57,6 +58,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 Route::middleware(['auth:sanctum', 'verified', 'authsprovider'])->group(function () {
     Route::get('/sprovider/dashboard', SproviderDashboardComponent::class)->name('sprovider.dashboard');
     Route::get('/sprovider/profile',SproviderProfileComponent::class)->name('sprovider.profile');
+    Route::get('/sprovider/profile/edit',EditSproviderProfileComponent::class)->name('sprovider.edit_profile');
 });
 
 //for admin
