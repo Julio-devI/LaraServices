@@ -124,6 +124,7 @@
                                         <li><a href="{{route('admin.service_categories')}}">Service Categories</a></li>
                                         <li><a href="{{route('admin.all_services')}}">All Services</a></li>
                                         <li><a href="{{route('admin.slider')}}">Manage Slider</a></li>
+                                        <li><a href="{{route('admin.contacts')}}">All Contacts</a></li>
                                         <li><a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">logout</a></li>
                                     </ul>
                                 </li>
@@ -250,7 +251,7 @@
                         <div class="col-md-6">
                             <ul class="nav-footer">
                                 <li><a href="about-us.html">About Us</a> </li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="{{route('home.contact')}}">Contact Us</a></li>
                                 <li><a href="faq.html">FAQ</a></li>
                                 <li><a href="terms-of-use.html">Terms of Use</a></li>
                                 <li><a href="privacy.html">Privacy</a></li>
