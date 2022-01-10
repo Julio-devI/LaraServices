@@ -10,6 +10,7 @@ use App\Http\Livewire\Admin\AdminEditServiceCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditServiceComponent;
 use App\Http\Livewire\Admin\AdminEditSlideComponent;
 use App\Http\Livewire\Admin\AdminServiceCategoryComponent;
+use App\Http\Livewire\Admin\AdminServiceProvidersComponent;
 use App\Http\Livewire\Admin\AdminServicesByCategoryComponent;
 use App\Http\Livewire\Admin\AdminServicesComponent;
 use App\Http\Livewire\Admin\AdminSliderComponent;
@@ -47,7 +48,7 @@ Route::get('/{category_slug}/services', ServicesByCategoryComponent::class)->nam
 Route::get('/service/{service_slug}', ServiceDetailsComponent::class)->name('home.service_details');
 
 Route::get('/change-location', ChangeLocationComponent::class)->name('home.change_location');
-Route::get('/contact-us',ContactComponent::class)->name('home.contact');
+Route::get('/contact-us', ContactComponent::class)->name('home.contact');
 
 Route::get('/autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
 Route::post('/search', [SearchController::class, 'searchService'])->name('searchService');
@@ -60,8 +61,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 //For sprovider
 Route::middleware(['auth:sanctum', 'verified', 'authsprovider'])->group(function () {
     Route::get('/sprovider/dashboard', SproviderDashboardComponent::class)->name('sprovider.dashboard');
-    Route::get('/sprovider/profile',SproviderProfileComponent::class)->name('sprovider.profile');
-    Route::get('/sprovider/profile/edit',EditSproviderProfileComponent::class)->name('sprovider.edit_profile');
+    Route::get('/sprovider/profile', SproviderProfileComponent::class)->name('sprovider.profile');
+    Route::get('/sprovider/profile/edit', EditSproviderProfileComponent::class)->name('sprovider.edit_profile');
 });
 
 //for admin
@@ -78,5 +79,7 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function () 
     Route::get('/admin/slider', AdminSliderComponent::class)->name('admin.slider');
     Route::get('/admin/slide/add', AdminAddSlideComponent::class)->name('admin.add_slide');
     Route::get('/admin/slide/edit/{slide_id}', AdminEditSlideComponent::class)->name('admin.edit_slide');
-    Route::get('/admin/contacts',AdminContactComponent::class)->name('admin.contacts');
+    Route::get('/admin/contacts', AdminContactComponent::class)->name('admin.contacts');
+
+    Route::get('/admin/service-providers', AdminServiceProvidersComponent::class)->name('admin.service_providers');
 });
