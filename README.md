@@ -3,6 +3,7 @@
 ![image](https://user-images.githubusercontent.com/72801350/149531687-c72253a9-3daa-4dc5-8feb-e57864f9dfa2.png)
 ![image](https://user-images.githubusercontent.com/72801350/149531870-80a43246-1b49-42f9-b722-865d27cf7e98.png)
 ![image](https://user-images.githubusercontent.com/72801350/149538479-f3b780bd-2bc0-4e60-a945-6cdf2ebf73c4.png)
+and others functions and frontend 
 
 ## About project LaraServices
 system developed in laravel 8 with livewire authentication with complex administrative functions like adding category, service providers and refined search system
